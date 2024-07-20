@@ -8,8 +8,6 @@ This project aims to test the CRUD (Create, Read, Update, Delete) operations on 
 - [Running Tests](#running-tests)
 - [Test Cases](#test-cases)
 - [Project Structure](#project-structure)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Prerequisites
 - Java Development Kit (JDK) 21
@@ -47,7 +45,7 @@ mvn test
 mvn test -Dcucumber.options="--tags @tagname"
 ````
 
-## Trello CRUD Test Cases
+##Test Cases
 
 ### Overview
 
@@ -229,13 +227,47 @@ This document outlines the test cases for CRUD (Create, Read, Update, Delete) op
 
 ---
 
-## How to Run Tests
+## Project Structure
 
-Instructions on how to run the test cases, including any setup or tools needed.
+```markdown
 
-## Notes
-
-Any additional information or considerations related to the test cases.
+TrelloBoard [TrelloBoard master]
+├── JRE System Library [JavaSE-1.8]
+├── Maven Dependencies
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   ├── api
+│   │   │   │   └── TrelloApiClient.java
+│   │   │   ├── pages
+│   │   │   │   ├── BoardPage.java
+│   │   │   │   ├── DashboardPage.java
+│   │   │   │   ├── HomePage.java
+│   │   │   │   └── LoginPage.java
+│   │   │   ├── resources
+│   │   │   │   └── config.properties
+│   │   │   └── utilities
+│   │   │       ├── ConfigReader.java
+│   │   │       └── WaitHelper.java
+│   ├── test
+│   │   ├── java
+│   │   │   ├── features
+│   │   │   │   ├── TrelloCRUDAPI.feature
+│   │   │   │   └── TrelloCRUDUI.feature
+│   │   │   ├── runners
+│   │   │   │   ├── TestRunner.java
+│   │   │   │   ├── TestRunnerAPI.java
+│   │   │   │   └── TestRunnerUI.java
+│   │   │   └── stepDefinitions
+│   │   │       ├── TrelloAPISteps.java
+│   │   │       └── TrelloUISteps.java
+├── JUnit 4
+├── Drivers
+│   └── chromedriver.exe
+├── src
+├── target
+├── pom.xml
+└── README.md
 
 
 
